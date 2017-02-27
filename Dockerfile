@@ -11,8 +11,8 @@ RUN git clone https://github.com/interconnect2017/Microservices-Catalog-Containe
 WORKDIR Microservices-Catalog-Container
 RUN sudo apt-get -y  install curl
 RUN curl -sSL https://github.com/amalgam8/amalgam8/releases/download/v0.4.0/a8sidecar.sh | sh
-ENV A8_SERVICE=accservices:v1
-ENV A8_ENDPOINT_PORT=8080
+ENV A8_SERVICE=catalogservice:v1
+ENV A8_ENDPOINT_PORT=3000
 ENV A8_ENDPOINT_TYPE=http
 ENV A8_REGISTRY_URL=http://micro-a8-registry.mybluemix.net
 ENV A8_REGISTRY_POLL=60s
